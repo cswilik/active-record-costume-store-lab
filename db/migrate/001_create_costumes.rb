@@ -1,3 +1,15 @@
+class CreateCostumes < ActiveRecord::Migration[5.2]
+    def change 
+        create_table :costumes do |t|
+            t.string :name 
+            t.float :price
+            t.string :size 
+            t.text :image_url
+            t.timestamps
+        end 
+    end 
+end 
+
 # Create a class and inherit from ActiveRecord::Migration
 
 # By convention, the class name should match the part of the
@@ -9,3 +21,24 @@
 # value types according to the spec
 
 # !!! Before you run rake db:migrate, remember to fill out the other migration files -- otherwise you'll get an error resulting from the blank migration files.
+
+
+# def change
+#     create_table :artists do |t|
+#     t.string :name
+#     t.string :genre
+#     t.integer :age
+#     t.string :hometown
+#   end
+# end
+
+
+
+# #do
+# def up
+# end
+
+# #undo
+# def down
+# end
+# end
